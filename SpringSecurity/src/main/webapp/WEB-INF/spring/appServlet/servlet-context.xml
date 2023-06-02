@@ -21,8 +21,11 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.spring.ex" />
-	
-	
+	<!--  
+	base-package 옵션은 패키지를 어디서부터 스캔할지 지정
+	따라서 최상위 경로를 지정해주면 해당 경로를 포함한 모든 하위 경로에 적용되고, 
+	어노테이션을 명시한 자바 파일들이 빈으로 등록되어 사용 가능 
+	+ C:\SpringSecurity_ojh\Servers\VMware tc Server Developer Edition v4.1-config\server.xml도 수정함-->
+	<context:component-scan base-package="com" />
 	
 </beans:beans>
